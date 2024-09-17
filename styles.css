@@ -1,0 +1,1716 @@
+body {
+    background-color: #F7F9F2;
+    font-family: Poppins;
+    color: #504538;
+    letter-spacing: 0.05em; 
+}
+
+/* Home */
+.top {
+    /*
+    background: linear-gradient(50deg, rgba(54,70,222,0.2) 0%, rgba(160,227,75,0.2) 100%);*/
+    background: #F7F9F2 ;
+    height: 100vh;
+    padding: 1vh 5vw;
+}
+
+.top h1 {
+    font-size: 24px;
+}
+
+.top p {
+    font-size: 12px;
+}
+
+.text-container {
+    text-align: left;
+    margin: 0 2vw; 
+}
+
+.image-container {
+    width: 100%;  /* Container takes up full width */
+    height: 250px;  /* Set the desired height of the container */
+    max-height: 310px; /* Ensure the container doesn't exceed this height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 2vh;
+}
+
+.image-container img {
+    max-height: 100%;  /* Ensures the image's height fits within the container */
+    width: auto;       /* Keeps the image's aspect ratio intact */
+    max-width: 100%;   /* Prevents the image from stretching beyond the container's width */
+    object-fit: contain;
+}
+
+#home-links ul {
+    display: flex; /* Display the list items in a flex layout */
+    list-style: none; /* Remove the bullets */
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+#home-links ul li {
+    font-size: 10px; /* Set font size to 12px */
+    border: 1px solid #000; /* Add a 1px solid border */
+    border-radius: 8px; /* Set the border radius to 5px */
+    padding: 2.5px 5px; /* Add some padding for spacing */
+    margin-right: 5px; /* Add space between list items */
+    display: flex;
+    align-items: center; /* Vertically center content in list items */
+    background-color: rgba(255, 255, 255, 0.101);
+}
+
+#home-links ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit the color of the list item */
+}
+
+#home-links ul li:nth-child(-n+2) i {
+    margin-right: 5px; /* Add space between the icon and the text for the first two items */
+}
+
+#viewmore {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -73%;
+    left: -28%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    animation: bounce 1.5s infinite; /* Add bounce animation */
+    z-index: 1; /* Ensure it's on top */
+}
+
+#arrow p {
+    margin: 0;
+    font-size: 14px; /* Adjust text size if needed */
+    color: #504538; /* Adjust text color if needed */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+#arrow img {
+    max-height: 25px; /* Scale down the arrow image */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px); /* Adjust bounce height */
+    }
+    60% {
+        transform: translateY(-5px); /* Adjust bounce height */
+    }
+}
+
+#viewmore img {
+    display: block;
+    max-width: 100%; /* Ensure image scales properly */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Nav */
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.logo img {
+    margin-top: 10px;
+    max-height: 45px; /* Replace 80px with a height you desire */
+    width: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-links ul {
+    display: flex;
+    gap: 3vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+nav .nav-links.active {
+    display: block;
+}
+
+/* Nav Links */
+nav ul li a {
+    text-decoration: none;
+    color: #504538; /* Default text color */
+    position: relative;
+}
+
+/* Underline on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #E32368; /* Pink underline */
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Active/Selected State */
+nav ul li.active a {
+    color: #504538; /* Keep text color the same as default */
+}
+
+nav ul li.active a::after {
+    width: 100%; /* Full-width underline for the active page */
+    background-color: #E32368; /* Pink underline for the active page */
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #504538;
+    border-radius: 5px;
+}
+
+/* Toggle menu visibility */
+nav.active .nav-links {
+    display: block;
+}
+
+#case-studies a {
+    text-decoration: none;
+}
+
+#cv, #vs, #ap, #ae, #rx {
+    margin: 1vh 6vw;
+    padding: 5vh 6vw;
+    border: solid #d1d1d1 1px;
+    border-radius: 5px;
+    height: fit-content; /* Set fixed height */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Gap between the two boxes */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* Prevent content overflow */
+    background: linear-gradient(270deg, rgba(54,70,222,0.1) 0%, rgba(227,9,127,0.1) 100%); /* Example gradient */
+}
+
+#cv:hover, #vs:hover, #ap:hover, #ae:hover, #rx:hover {
+    border-color: #E32368;
+    transform: translateY(-1vh);
+}
+
+#cv > .cs-text, #vs > .cs-text, #ap > .cs-text, #ae > .cs-text, #rx > .cs-text {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Align text content in a column */
+    align-items: left; /* Center items horizontally */
+    text-align: left; /* Center text horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure full height usage */
+    box-sizing: border-box; /* Include padding and border in the element's total height and width */
+}
+
+#cv a, #vs a, #ap a, #ae a, #rx a {
+    text-decoration: none;
+}
+
+#cv h1, #vs h1, #ap h1, #ae h1, #rx h1 {
+    font-size: 18px;
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align h1 text to the left */
+}
+
+#cv > .cs-img, #vs > .cs-img, #ap > .cs-img, #ae > .cs-img, #rx > .cs-img {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: auto; /* Allow container height to adapt to the image */
+    padding: 0; /* Optional: Adjust padding if needed */
+    flex: 1; /* Make the image container flexible in size */
+}
+
+#cv .cs-img img, #vs .cs-img img, #ap .cs-img img, #ae .cs-img img, #rx .cs-img img {
+    max-width: 100%; /* Ensure the image does not exceed container width */
+    max-height: 150px; /* Set the maximum height for the image */
+    height: auto; /* Maintain aspect ratio */
+    width: auto;
+    display: block; /* Removes extra space below image */
+}
+
+#ap .cs-img img {
+    max-height: 225px; /* Set the maximum height for the image */
+}
+
+
+#cv {
+    background: linear-gradient(270deg, rgba(54,70,222,0.1) 0%, rgba(227,9,127,0.1) 100%);
+}
+
+#ap {
+    background: linear-gradient(270deg, rgba(28,188,223,0.1) 0%, rgba(26,46,225,0.1) 100%);
+}
+
+#vs {
+    background: linear-gradient(90deg, rgba(230,196,17,0.1) 0%, rgba(42,176,30,0.1) 100%);
+}
+
+#ae {
+    background: linear-gradient(270deg, rgba(28,188,223,0.1) 0%, rgba(42,176,30,0.1) 100%);
+}
+
+#rx {
+    background: linear-gradient(90deg, rgba(75,200,227,0.15) 0%, rgba(227,35,104,0.18) 100%);
+}
+
+#selectedwk {
+    margin: 1vh 6vw;
+    padding-bottom: 1vh
+}
+
+#selectedwk h2 {
+    font-size: 18px;
+}
+
+#selectedwk p {
+    font-size: 12px;
+}
+
+/* About */
+.ab-top{
+    /*background: linear-gradient(50deg, rgba(54,70,222,0.2) 0%, rgba(160,227,75,0.2) 100%);*/
+    background: #F7F9F2;
+    padding: 1vh 4vw;
+}
+
+.ab-top h1 {
+    font-size: 24px;
+}
+
+.ab-top p {
+    font-size: 12px;
+}
+
+.ab-bottom h2 {
+    font-size: 16px;
+}
+
+#workplay {
+    padding: 0vh 4vw 4vw 1vh;
+}
+
+#community {
+    padding: 1vh 4vw;
+    background-color: #edf0e0;
+    border-radius: 15px;
+}
+
+#ab-other {
+    padding: 1vh 4vw;
+    margin-bottom: 5vh;
+}
+
+.community-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* Adjust the gap between images */
+}
+
+.community-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#comdesc {
+    font-size: 8px;
+}
+
+#playtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#playtitle img {
+    height: 90px;
+    width: auto;
+}
+
+#tools ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+    gap: 2vw; /* Adjust the gap between items as needed */
+}
+
+#tools ul li {
+    font-size: 12px; /* Adjust font size if needed */
+    list-style: none;
+}
+
+/* Case Study General Info */
+header {
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#cv-header {
+    padding: 4vh 4vw;
+    background-color: #3646DE2c;
+    border-radius: 10px;
+}
+
+#cv-header img {
+    max-height: 250px;
+    width: 100%; /* Allow the width to adjust automatically based on height */
+    height: auto;
+    object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+    margin: auto; /* Center the image horizontally */
+}
+
+#ap-header {
+    padding: 5vh 4vw;
+    background-color: #1C99DF2c;
+    border-radius: 10px;
+}
+
+#ap-header img {
+    max-height: 350px;
+    width: 100%; /* Allow the width to adjust automatically based on height */
+    height: auto;
+    object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+    margin: auto; /* Center the image horizontally */
+}
+
+#vs-header {
+    padding: 5vh 4vw;
+    background-color: #E6C4112c;
+    border-radius: 10px;
+}
+
+#vs-header img {
+    max-height: 350px;
+    width: 100%; /* Allow the width to adjust automatically based on height */
+    height: auto;
+    object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+    margin: auto; /* Center the image horizontally */
+}
+
+#ae-header {
+    padding: 5vh 4vw;
+    background-color: #2AB01E2c;
+    border-radius: 10px;
+}
+
+#ae-header img {
+    max-height: 350px;
+    width: 100%; /* Allow the width to adjust automatically based on height */
+    height: auto;
+    object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+    margin: auto; /* Center the image horizontally */
+}
+
+#rx-header {
+    padding: 5vh 4vw;
+    background-color: #3646DE2c;
+    border-radius: 10px;
+}
+
+#rx-header img {
+    max-height: 350px;
+    width: 100%; /* Allow the width to adjust automatically based on height */
+    height: auto;
+    object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+    margin: auto; /* Center the image horizontally */
+}
+
+.overview {
+    background-color: #F7F9F2;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.overview p b {
+    font-weight: 525;
+}
+
+.problemstatement h2 {
+    padding-bottom: 2vh;
+    border-bottom: 2px solid #504538;
+}
+.problemstatement {
+    background-color: #edf0e0;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.problemstatement img {
+    margin: 0 auto;
+    max-height: 260px;
+    max-width: 100%; /* Allow image to shrink with the container */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Prevent stretching */
+}
+
+.intext-img img {
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
+    max-width: 100%; /* Allow image to shrink with the container */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Prevent stretching */
+}
+
+.ps p {
+    font-size: 16px;
+    line-height: 2em;
+}
+
+.light h2 {
+    padding-bottom: 2vh;
+    border-bottom: 2px solid #504538;
+}
+
+.dark h2 {
+    padding-bottom: 2vh;
+    border-bottom: 2px solid #504538;
+}
+
+.light {
+    background-color: #F7F9F2;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.dark {
+    background-color: #edf0e0;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.outcome {
+    background-color: #3647de20;
+    padding: 1vh 2vw;
+    border-radius: 15px;
+    margin: 1vh 0 2vh 0;
+}
+
+
+.final {
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.final-design-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 1vh 2vw;
+}
+
+.final-design-flex img {
+    max-height: 250px;
+    width: auto;
+}
+
+.final-flex-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the right */
+    text-align: left; /* Right-align the text itself */
+    justify-content: center; /* Center content vertically */
+}
+
+.final-flex-img {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Align the image to the far right */
+    align-items: center; /* Center the image vertically */
+}
+
+.final-design-top, .final-design-bottom {
+    padding: 2vh 3vw;
+    background-color: #EDF0E0;
+    border-radius: 10px;
+}
+
+/****/
+.final-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.final-design-top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.final-design-top img {
+    max-height: 250px;
+    width: 100%; /* Allow the width to adjust automatically based on height */
+    height: auto;
+    object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+    margin: auto; /* Center the image horizontally */
+}
+
+
+.final-design-bottom {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.final-design-bottom img {
+    padding-top: 1vh;
+    max-height: 250px;
+    height: auto;
+    width: 100%; /* Adjust the width proportionally based on the height */
+    object-fit: contain; /* Prevent the image from stretching while fitting it within the container */
+    margin: auto; /* Center the image horizontally */
+}
+
+/* Typography */
+p {
+    font-size: 12px;
+    line-height: 3vh;
+}
+
+ul li {
+    font-size: 12px;
+    line-height: 3vh;
+}
+
+ol li {
+    font-size: 12px;
+    line-height: 3vh;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.top-content h1 b {
+    background: linear-gradient(90deg, rgba(54,70,222,1) 0%, rgba(54,70,222,1) 100%);
+    -webkit-background-clip: text; /* For Chrome, Safari, and Edge */
+    -webkit-text-fill-color: transparent; /* For Chrome, Safari, and Edge */
+    background-clip: text; /* For Firefox */
+    font-weight: bold; /* Ensure bold styling */
+}
+
+
+#hello {
+    margin-top: 0;
+    padding-bottom: 2vh; /* Optional: Add some space between text and border */
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+b {
+    color: #3646DE;
+    font-weight: 700;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.top a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.top b a {
+    text-decoration: none;
+    color: #3646DE;
+}
+
+.top b a:hover {
+    color: #E32368; /* Color on hover */
+}
+
+.overview b, .light b, .dark b {
+    color: #504538;
+    font-weight: 700;
+}
+
+a {
+    color: #504538;
+}
+
+#community a b {
+    color: #E32368;
+}
+
+#community a {
+    text-decoration: none;
+}
+
+/*RX*/
+#rx-uc {
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    height: 200px; /* Set height to 200px */
+    width: 100%; /* Ensure it takes full width if needed */
+}
+
+#rx-uc img {
+    max-height: 100%; /* Ensure the image fits within the height of the container */
+    width: auto; /* Maintain aspect ratio */
+}
+
+#rx-check {
+    display: flex;
+    justify-content: left;
+}
+
+#rx-check #rx-check-text {
+    width: 66%; /* Take up 66% of the space */
+    margin-right: 20px; /* Optional: Add margin for spacing between text and image */
+}
+
+#rx-office {
+    width: 34%; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 115px;
+    border-radius: 10px;
+}
+
+#rx-office img {
+    max-height: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+
+#rx-wf{
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    height: 200px; /* Set height to 200px */
+    width: 100%; /* Ensure it takes full width if needed */
+}
+
+#rx-wf img {
+    max-height: 100%; /* Ensure the image fits within the height of the container */
+    width: auto; /* Maintain aspect ratio */
+}
+
+#rx-6uc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, auto); /* 2 rows */
+    gap: 20px; /* Space between boxes */
+}
+
+#rx-6uc ul li b {
+    font-weight: 600;
+    font-size: 14;
+}
+
+#rx-6uc > ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: contents; /* Allow grid items to flow properly */
+}
+
+#rx-6uc > ul > li {
+    background-color: white; /* White background for the boxes */
+    padding: 20px; /* Padding inside each box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+}
+
+#rx-6uc ul ul {
+    background-color: transparent; /* Ensure nested lists do not have a background */
+    padding: 10px 0 0 20px; /* Adjust padding for nested list */
+    list-style-type: disc; /* Keep bullet points for nested lists */
+}
+
+
+/****AE***/
+#ae-inresearch ul {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove default list styling */
+}
+
+#ae-inresearch ul li {
+    background-color: white; /* Set the background color to white */
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+#ae-inresearch ul li b {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#ae-inresearch ul li {
+    font-size: 12px;
+}
+
+.dark #challenges div {
+    background-color: #F7F9F2;
+}
+
+#challenges{
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+#challenges div {
+    background-color: #EDF0E0; /* Set the background color to white */
+    padding: 1vh 2vw; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+
+}
+
+#challenges div p {
+    font-size: 12px;
+    line-height: 2em;
+}
+
+#challenges-img {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center;     /* Vertically center the image */
+}
+
+#challenges-img img {
+    max-height: 250px;       /* Set the maximum height to 150px */
+    width: auto;             /* Maintain the aspect ratio */
+    max-width: 100%;         /* Ensure it scales responsively */
+}
+
+.cv-testing ul {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove default list styling */
+}
+
+.cv-testing ul li {
+    background-color: white; /* Set the background color to white */
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+#cv-quotes ul {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove default list styling */
+}
+
+#cv-quotes ul li {
+    background-color: #F7F9F2;
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+#cv-quotes p {
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+#cv-uf ul {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove default list styling */
+}
+
+#cv-uf ul li {
+    background-color: white; /* Set the background color to white */
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+#cv-uf ul li b {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#cv-uf ul li {
+    font-size: 12px;
+}
+
+#ap-r ul {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove default list styling */
+}
+
+#ap-r ul li {
+    background-color: white; /* Set the background color to white */
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+#ap-r ul li b {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#ap-r ul li {
+    font-size: 12px;
+}
+
+#ap-quotes ul {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove default list styling */
+}
+
+#ap-quotes ul li {
+    background-color: #F7F9F2;
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+#ap-quotes p {
+    padding: 2vh; /* Add padding inside the boxes */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+/* Media Query for Desktop */
+@media (min-width: 800px) {
+    .top-content {
+        display: flex;
+        gap: 30px;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Align items vertically if needed */
+        padding: 10vh 5vw;
+    }
+
+    .top h1 {
+        font-size: 32px;
+    }
+    
+    .top p {
+        font-size: 16px;
+        line-height: 4vh;
+    }
+
+
+    #home-links ul li {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        list-style: none;
+        padding: 5px 10px;
+        border: 1px solid #504538; /* Adjust the border color as needed */
+        border-radius: 8px;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+        color: #504538; /* Default text and icon color */
+    }
+    
+    #home-links ul li a {
+        color: inherit; /* Ensure the icons inside links inherit color from the li */
+        text-decoration: none; /* Remove underline */
+    }
+    
+    #home-links ul li:hover {
+        background-color: #504538;
+        color: #F7F9F2; /* Change text and icon color */
+    }
+    
+    #home-links ul li:hover i,
+    #home-links ul li:hover a {
+        color: #F7F9F2; /* Change the color of icons and links */
+    }
+    
+    /* Add space between the icon and the text for the first two items */
+    #home-links ul li:nth-child(-n+2) i {
+        margin-right: 8px;
+    }
+    
+    #home-links ul li i {
+        margin-right: 0; /* Reset margin for other items (like LinkedIn and email) */
+    }
+    
+
+    /* Flex containers side by side */
+    .text-container,
+    .image-container {
+        padding: 0; /* Optional: Add padding for spacing */
+        text-align: center; /* Center content within the block */
+    }
+
+    .text-container {
+        flex: 4;
+        text-align: left; /* Keep text left-aligned */
+        margin-right: 0px;
+    }
+
+    .image-container {
+        flex: 3;
+        margin-left: 0px;
+        padding-left: 0px;
+        text-align: center; /* Keep image centered */
+        width: 100%;  /* Container takes up full width */
+        height: 440px;  /* Set the desired height of the container */
+        max-height: 500px; /* Ensure the container doesn't exceed this height */
+        display: flex;
+    }
+    
+    .image-container img {
+        max-height: 100%;  /* Ensures the image's height fits within the container */
+        width: auto;       /* Keeps the image's aspect ratio intact */
+        max-width: 100%;   /* Prevents the image from stretching beyond the container's width */
+    }
+
+    nav ul li a {
+        font-size: 15px; /* Adjust this size as needed */
+    }
+
+    #viewmore {
+        position: absolute;
+        bottom: 8vh;  /* Adjust this value to control the distance from the bottom */
+        left: 50%;
+        transform: translateX(-50%);  /* Center horizontally */
+        text-align: center;
+    }
+
+    #cv, #vs, #ap, #ae, #rx {
+        margin: 1vh 12vw;
+        padding: 5vh 4vw;
+        border: solid #d1d1d1 2px;
+        border-radius: 10px;
+        height: 250px; /* Set fixed height */
+        display: flex;
+        flex-direction: row;
+        gap: 20px; /* Gap between the two boxes */
+        transition: border-color 0.3s ease, transform 0.3s ease;
+        overflow: visible; /* Prevent content overflow */
+    }
+    
+    #cv:hover, #vs:hover, #ap:hover, #ae:hover, #rx:hover {
+        border-color: #E32368;
+        transform: translateY(-1vh);
+    }
+    
+    #cv > .cs-text, #vs > .cs-text, #ap > .cs-text, #ae > .cs-text, #rx > .cs-text,
+    #cv > .cs-img, #vs > .cs-img, #ap > .cs-img, #ae > .cs-img, #rx > .cs-img {
+        border: none; /* Remove any border from the inner divs */
+        padding: 0; /* Remove padding */
+    }
+    
+    #cv {
+        flex: 1 1 50%; /* Adjusts the width of the flex items */
+    }
+    
+    #vs {
+        flex: 1 1 50%;
+    }
+    
+    #ap {
+        flex: 1 1 50%;
+    }
+    
+    #ae {
+        flex: 1 1 50%;
+    }
+    
+    #rx {
+        flex: 1 1 50%;
+    }
+    
+    
+    #cv .cs-text, #vs .cs-text, #ap .cs-text, #ae .cs-text, #rx .cs-text {
+        flex: 1; /* Ensures text container takes up equal space */
+    }
+    
+    #cv h1, #vs h1, #ap h1, #ae h1, #rx h1 {
+        font-size: 24px; /* Adjusted font size */
+        margin: 0; /* Remove default margin */
+    }
+
+    #cv .cs-img img, #vs .cs-img img, #ap .cs-img img, #ae .cs-img img, #rx .cs-img img {
+        width: auto; /* Makes image fill the container on larger screens */
+        height: auto; /* Keeps aspect ratio */
+        max-height: 225px; /* Ensures the image does not exceed 150px */
+        display: block; /* Removes extra space below image */
+    }
+    
+    #ap .cs-img img {
+        max-height: 275px; /* Set the maximum height for the image */
+    }
+
+    #cv .cs-img, #vs .cs-img, #ap .cs-img, #ae .cs-img, #rx .cs-img {
+        flex: 1; /* Ensures image container takes up equal space */
+    }
+    
+
+    #selectedwk {
+        margin: 1vh 12vw;
+        padding-top: 4vh;
+        padding-bottom: 2vh
+    }
+
+    #selectedwk h2 {
+        font-size: 24px;
+    }
+    
+    #selectedwk p {
+        font-size: 14px;
+    }
+
+    /***About**/
+
+    .ab-top-content {
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Align items vertically if needed */
+        padding: 8vh 5vw;
+    }
+
+    .ab-top h1, .ab-bottom h1{
+        font-size: 32px;
+    }
+    
+    .ab-top p, .ab-bottom p{
+        font-size: 14px;
+        line-height: 4vh;
+    }
+
+    .ab-bottom {
+        padding: 2vh 10vw;
+    }
+
+    .ab-bottom h2 {
+        font-size: 24px;
+    }
+
+    #awards ul li {
+        font-size: 14px;
+        line-height: 4vh;
+    }
+
+    #tools ul {
+        gap: 10px; /* Adjust the gap between items as needed */
+    }
+
+    #tools ul li {
+        font-size: 14px;
+        line-height: 4vh;
+    }
+
+    .community-images {
+        grid-template-columns: repeat(4, 1fr); /* 1 row with 4 images */
+    }
+
+    .community-images img {
+        width: 100%;
+    }
+
+    #comdesc {
+        font-size: 10px;
+    }
+
+    #workplay {
+        display: flex; /* Arrange children (divs) in a row */
+        justify-content: space-between; /* Add space between the boxes */
+        gap: 50px; /* Adjust space between the boxes as needed */
+        margin-bottom: 5vh;
+    }
+
+    #work, #play {
+        flex: 1; /* Allow the boxes to grow and fill the available space */
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    #work {
+        justify-content: flex-start; /* Align content to the top */
+        padding: 0;
+    }
+    
+    #play {
+        justify-content: flex-end; /* Align content to the bottom */
+        padding: 0;
+    }
+    
+    #ab-other {
+        margin-top: 5vh;
+        display: flex; /* Arrange children (divs) in a row */
+        justify-content: space-between; /* Add space between the boxes */
+        gap: 45px; /* Adjust space between the boxes as needed */
+    }
+
+    #awards, #tools {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+    }
+    
+    #awards {
+        flex: 2;
+        justify-content: flex-start; /* Align content to the top */
+    }
+    
+    #tools {
+        flex: 1;
+        justify-content: flex-end; /* Align content to the bottom */
+        align-content: flex-end;
+    }
+    
+    #tools ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+        gap: 2px; /* Adjust the gap between items as needed */
+    }
+    
+    #tools ul li {
+        font-size: 14px; /* Adjust font size if needed */
+    }
+    
+    #awards ul {
+        list-style:disc; /* Keep circle bullets for awards */
+        font-weight: 600;
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        margin-left: 20px;
+    }
+    
+    /* Maintain default list styling for nested lists */
+    #awards ul li ul {
+        list-style: none; 
+        margin-left: 25px; /* Indent nested lists */
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    /* Use the same for tools if needed */
+    #tools ul {
+        list-style: none; /* No bullets for tools */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+    
+    #tools ul li ul {
+        list-style: none; /* No bullets for nested lists */
+        margin-left: 20px; /* Indent nested lists */
+    }
+    
+    #awards ul li {
+        font-size: 14px; /* Adjust font size if needed */
+        margin-bottom: 5px; /* Add space between list items */
+    }
+
+    #tools ul li {
+        font-size: 14px; /* Adjust font size if needed */
+        margin-bottom: 2.5px; /* Add space between list items */
+    }
+
+    /* Case Study General Info */
+    header {
+        padding-right: 5vw;
+        padding-left: 5vw;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+
+    #cv-header {
+        padding: 5vh 4vw;
+        background-color: #3646DE2c;
+        border-radius: 10px;
+    }
+    
+    #cv-header img {
+        max-height: 350px;
+        width: 100%; /* Allow the width to adjust automatically based on height */
+        height: auto;
+        object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+        margin: auto; /* Center the image horizontally */
+    }
+
+    #ap-header {
+        padding: 5vh 4vw;
+        background-color: #1C99DF2c;
+        border-radius: 10px;
+    }
+    
+    #ap-header img {
+        max-height: 350px;
+        width: 100%; /* Allow the width to adjust automatically based on height */
+        height: auto;
+        object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+        margin: auto; /* Center the image horizontally */
+    }
+
+    #vs-header {
+        padding: 5vh 4vw;
+        background-color: #E6C4112c;
+        border-radius: 10px;
+    }
+    
+    #vs-header img {
+        max-height: 350px;
+        width: 100%; /* Allow the width to adjust automatically based on height */
+        height: auto;
+        object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+        margin: auto; /* Center the image horizontally */
+    }
+
+    #ae-header {
+        padding: 5vh 4vw;
+        background-color: #2AB01E2c;
+        border-radius: 10px;
+    }
+    
+    #ae-header img {
+        max-height: 350px;
+        width: 100%; /* Allow the width to adjust automatically based on height */
+        height: auto;
+        object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+        margin: auto; /* Center the image horizontally */
+    }
+
+    #rx-header {
+        padding: 5vh 4vw;
+        background-color: #3646DE2c;
+        border-radius: 10px;
+    }
+    
+    #rx-header img {
+        max-height: 350px;
+        width: 100%; /* Allow the width to adjust automatically based on height */
+        height: auto;
+        object-fit: contain; /* Ensure the image is contained within the given height without stretching */
+        margin: auto; /* Center the image horizontally */
+    }
+
+    .overview {
+        background-color: #F7F9F2;
+        padding-right: 17vw;
+        padding-left: 17vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    .problemstatement {
+        background-color: #edf0e0;
+        padding-right: 17vw;
+        padding-left: 17vw;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+
+    .problemstatement img {
+        display: block;
+        margin: 0 auto;
+        max-height: 260px;
+        max-width: 100%; /* Allow image to shrink with the container */
+        height: auto; /* Maintain aspect ratio */
+        width: auto; /* Prevent stretching */
+    }
+    
+    .light {
+        background-color: #F7F9F2;
+        padding-right: 17vw;
+        padding-left: 17vw;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .dark {
+        background-color: #edf0e0;
+        padding-right: 17vw;
+        padding-left: 17vw;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .role {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+        gap: 10vw; /* Adjust space between columns as needed */
+        align-items: start; /* Align grid items to the top of their grid area */
+    }
+
+    .role > div {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: flex-start; /* Align items to the top */
+        padding: 10px;
+    }
+
+    .role h4 {
+        margin: 0; /* Remove default margin for h4 */
+    }
+
+    .role p {
+        margin: 0; /* Remove default margin for p */
+    }
+
+    .problemstatement h2 {
+        font-size: 24px;
+    }
+
+    .light h2 {
+        font-size: 24px;
+    }
+
+    .dark h2 {
+        font-size: 24px;
+    }
+    
+    .final {
+        padding-right: 5vw;
+        padding-left: 5vw;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+    
+    .final-design-flex {
+        padding: 1vh 2vw;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        align-items: center; /* Center content vertically in the flexboxes */
+        flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+    }
+
+    .final-design-flex {
+        padding: 1vh 2vw;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        align-items: center; /* Center content vertically in the flexboxes */
+        flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+    }
+    
+    .final-design-flex img {
+        max-height: 350px;
+        max-width: 100%;
+        width: auto; /* Ensure images adjust their width to fit container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .final-flex-text, .final-design-top, .final-design-bottom {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align all content (text) to the left */
+        justify-content: center; /* Center content vertically */
+    }
+    
+    .final-flex-text h3, .final-design-top h3, .final-design-bottom h3,
+    .final-flex-text p, .final-design-top p, .final-design-bottom p {
+        text-align: left; /* Ensure h3 and p elements are left-aligned */
+    }
+    
+    .final-flex-img {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end; /* Ensure the image stays aligned to the right */
+        align-items: center; /* Center the image vertically */
+    }
+    
+    .final-2 {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+    }
+    
+    .final-design-top, .final-design-bottom {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align content to the left */
+        justify-content: center; /* Center content vertically */
+    }
+    
+    .final-design-top img, .final-design-bottom img {
+        max-height: 350px;
+        width: 100%; /* Scale image proportionally */
+        height: auto;
+        object-fit: contain;
+        margin: auto; /* Center image */
+    }
+    
+    
+
+    /***RX****/
+    #rx-uc {
+        display: flex;
+        justify-content: center; /* Center image horizontally */
+        align-items: center; /* Center image vertically */
+        height: 200px; /* Set height to 200px */
+        width: 100%; /* Ensure it takes full width if needed */
+    }
+
+    #rx-6uc {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: repeat(2, auto); /* 2 rows */
+        gap: 20px; /* Space between boxes */
+    }
+
+    #rx-6uc ul li b {
+        font-weight: 600;
+        font-size: 16;
+    }
+
+    #rx-6uc > ul {
+        list-style-type: none; /* Remove bullet points */
+        margin: 0;
+        padding: 0;
+        display: contents; /* Allow grid items to flow properly */
+    }
+
+    #rx-6uc > ul > li {
+        background-color: white; /* White background for the boxes */
+        padding: 20px; /* Padding inside each box */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        display: flex;
+        flex-direction: column;
+    }
+
+    #rx-6uc ul ul {
+        background-color: transparent; /* Ensure nested lists do not have a background */
+        padding: 10px 0 0 20px; /* Adjust padding for nested list */
+        list-style-type: disc; /* Keep bullet points for nested lists */
+    }
+
+    /****Typography****/
+    p {
+        font-size: 14px;
+        line-height: 4vh;
+    }
+    /******/
+    #ae-inresearch ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+        gap: 20px; /* Space between the boxes */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style: none; /* Remove default list styling */
+    }
+
+    #ae-inresearch ul li {
+        background-color: white; /* Set the background color to white */
+        padding: 20px; /* Add padding inside the boxes */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    }
+
+    #challenges {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+        gap: 20px; /* Space between the boxes */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+    /*******/
+    
+    .cv-testing ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+        gap: 20px; /* Space between the boxes */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style: none; /* Remove default list styling */
+    }
+    #cv-quotes ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+        gap: 15px; /* Space between the boxes */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style: none; /* Remove default list styling */
+    }
+    
+    #cv-uf ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+        gap: 20px; /* Space between the boxes */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style: none; /* Remove default list styling */
+    }
+
+    #cv-uf ul li {
+        background-color: white; /* Set the background color to white */
+        padding: 20px; /* Add padding inside the boxes */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    }
+
+    /***AP****/
+    #ap-r ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+        gap: 20px; /* Space between the boxes */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style: none; /* Remove default list styling */
+    }
+
+    #ap-r ul li {
+        background-color: white; /* Set the background color to white */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+        padding: 20px; /* Add padding inside the boxes */
+        border-radius: 5px; /* Optional: Add rounded corners */
+    }
+
+    #ap-quotes ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+        gap: 15px; /* Space between the boxes */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style: none; /* Remove default list styling */
+    }
+}
+
+@media (max-width: 800px) {
+    nav .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #F7F9F2;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav ul li a::after {
+        content: none;
+    }
+
+    nav ul li a:hover::after {
+        width: 0; /* Disable hover effect */
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .top {
+        height: fit-content;
+    }
+
+    .logo img {
+        max-height: 45px; /* Replace 80px with a height you desire */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    #viewmore {
+        display: none; /* Hide the viewmore button */
+    }
+
+    #workplay, #community, #ab-other {
+        padding: 1vh 5vw;
+    }
+
+    #playtitle img {
+        display: none;
+    }
+}

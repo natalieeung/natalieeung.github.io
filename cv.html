@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!---Normalize CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!--Google Fonts-->
+        <!--Poppins-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+        <!--Style Sheet-->
+        <link href="styles.css" rel="stylesheet">
+        
+    <title>Natalie Ung's Portfolio - Accessibility Guide Case Study</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="nu logo"></a>
+            </div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Vb_X3xFp9RhavlzieOaVPvtOaosNTJ5A/view?usp=sharing" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <h1>Accessibility Guidelines</h1>
+        <h2>COMMVAULT DESIGN SYSTEM</h2>
+        <br>
+        <div id="cv-header">
+            <img src="images/CV.png">
+        </div>
+    </header>
+
+    <section>
+        <div class="overview">
+            <h3>OVERVIEW</h3>
+            <p>Commvault is the leading provider of data protection and management software applications related services. This past year, the UX team has taken the initiative to conduct assessments aimed at identifying areas where Commvault products need improvement to align with Web Content Accessibility Guidelines (WCAG), resulting in a list of 20+ areas requiring attention, each related to various web accessibility topics. Although developers were able to resolve most issues encountered, they lacked a centralized resource for addressing and preventing accessibility errors consistently.</p>
+
+            <p>My project focused on designing an accessibility section within the internal design system site. This section includes detailed guidance on WCAG, potential compliance issues faced by Commvault engineers, and effective solutions. <b>As a UX Design Intern, I led research, design, and testing efforts for this initiative.</b></p>
+
+            <br>
+            <div class="role">
+                <div>
+                    <h4>Role</h4>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div>
+                    <h4>Team</h4>
+                    <p>Project Manager, Designers, Developers</p>
+                </div>
+                <div>
+                    <h4>Timeline</h4>
+                    <p>6 months</p>
+                </div>
+            </div>
+
+            <div class="outcome">
+                <h3>OUTCOME</h3>
+                <p>Presented this project to a panel of 10 judges (Commvault employees from all departments) in a skit format and won 🥇1st Place (out of ~40 projects) in the Commvault intern project contest!! These screens are currently live and are being used by frontend developers currently addressing accessibility issues.
+                </p>
+            </div>
+            <br>
+        </div>
+
+            <div class="problemstatement">
+                <h2>Problem Statement</h2>
+                <div class="ps">
+                    <p>CV developers lack one central location for guidance on Accessibility Practices and Principles, resulting in significant development time being spent on researching these issues.​</p>
+                </div>
+                <br>
+                <p><strong>→ How do Commvault developers currently solve accessibility issues?</strong><br>We wanted needed to address and optimize critical steps in their workflow:</p>
+                <div id="cv-uf">
+                    <ul>
+                        <li><strong>🔎 01 Finding the Issue</strong><br>Developers refer to the most recent Accessibility Report to identify instances of poor accessibility</li>
+                        <li><strong>💻 02 Researching the Issue</strong><br>Developers use web to research WCAG guidelines to understand each error in full</li>
+                        <li><strong>📟 03 Fixing the Issue</strong><br>Developers devise code changes and implement these on company products</li>
+                    </ul>
+                </div>
+                <p>We tried addressing one of these accessibility issues on our own and it took almost 3 hours to understand the issue itself! 😅</p>
+            </div>
+
+            <div class="light">
+                <h2>Analyzing Accessibility Resources</h2>
+                <p>To better understand what exactly would help a developer in these circumstances, I did a comparative analysis on 7 different accessibility-related websites, including design systems of other companies, government guidelines, and accessibility-focused websites. We discovered that including visuals, simplified language, strong navigation would be helpful tools for developers. Time permitting, wanted to also include interactive coding elements. </p>
+                <br>
+                <div class="intext-img">
+                    <img src="images/cv/cv_ca.png">
+                </div>
+                <br>
+            </div>
+
+            <div class="dark">
+                <h2>Sketches to Wireframes...</h2>
+                <p>Based on insights from our comparative analysis, we developed a flowchart to outline the required decisions, actions, and necessary pages, as well as the overall information architecture. I used FigJam to create sketches (and later, Figma to create wireframes) that supported each of these main screens, aiming to follow the established design patterns while incorporating new accessibility-related elements.</p>  
+                <div class="intext-img">
+                    <img src="images/cv/cv_sketches.png" alt="commvault sketches">
+                </div>
+                <br>
+                <p>Every 2 weeks, I would have feedback sessions with my mentor and <strong>VP of UX Design, Parisa Bazl</a></strong> and share work with my fellow UX Development intern to ensure the project was feasible! I iterated through 3 rounds of wireframes before building them on Figma and on production.</p>
+                <img>
+            </div>
+
+            <div class="light">
+                <h2>Usability Testing</h2>
+                <p>For usability testing, we reached out to <b>Commvault frontend developers</b> that may encounter accessibility issues in their work. We created a <b>two-part test</b> with a navigational portion as well as comprehension tasks with hypothetical scenarios to gauge ease-of-use as well as applicability.</p>
+                <div class="cv-testing">
+                <ul>
+                    <li><strong>🗺️ 01 Navigation</strong><br><br>We wanted to observe how users <strong>navigate the site</strong> and how they <strong>perceive the content</strong> on each page.<br><br>I wanted to focus on  how users <strong>used different information</strong> (guideline name, description details, key-words) to <strong>find guideline pages</strong>. Furthermore, we asked users to interact with content on all pages to gauge how <strong>intuitive</strong> the interactive elements were.</li>
+                    <li><strong>💭 02 Comprehension</strong><br><br>We wanted to see<strong> how developers would apply the principles</strong> and <strong>tools</strong> on our site to fix accessibility errors.<br><br>I provided testers with <strong>snippets of code</strong> from one of Commvault's products and <strong>highlighted accessibility issues</strong>. Testers were asked to <strong>identify</strong> the error, <strong>locate</strong> the corresponding guideline, and describe how they would <strong>address</strong> it.</li>
+                </ul>
+                </div>
+                <br>
+                <p>I led <b>2 rounds</b> of user tests with <b>8 users</b> to ensure our designs were solid. We used Microsoft Teams to facilitate these sessions.</p>
+                <br>
+            </div>
+
+            <div class="dark">
+                <h2>Testing Feedback</h2>
+                <p>I am unable to share any images from our testing sessions due to privacy reasons</strong>, but here are some highlights</p>
+                
+                <div id="cv-quotes">
+                    <ul>
+                        <li><b>💬 User 1</b><br>"The site makes it very easy to find that information on what I need"</li>
+                        <li><b>💬 User 2</b><br>“The examples will really help, the code is very similar in real scenarios”</li>
+                        <li><b>💬 User 3</b><br>“This will definitely be useful at [many levels] to ensure components are compliant with accessibility standards”</li>
+                    </ul>
+                </div>
+                <br>
+            </div>
+
+            <div class="light">
+                <h2>Final Designs</h2>
+                <p>Using existing components and creating roughly 10 of my own, I created 3 main page templates for the Accessibility guide: an overview page, and a principle & guideline template. I am only able to show certain parts of the project per privacy agreements. 
+                </p>
+            </div>
+
+            <div class="final">
+                <div class="final-design-top">
+                    <h3>Overview</h3>
+                    <p>We created an overview landing page that covered all the basic aspects of accessibility: definitions, principles, levels, and technologies.</p>
+                    <img src="images/cv/cv_overview.png">
+                </div>
+                <br>
+                <div class="final-2">
+                    <div class="final-design-top">
+                        <h3>Examples</h3>
+                        <p>To help provide more guidance on certain WCAG issues and their criteria, we created editable live-updating code examples (if applicable), and tips for testing accessibility. These examples have similar components and structure to Commvault elements.</p>
+                        <img src="images/cv/cv_examples.png">
+                    </div>
+                    <div class="final-design-top">
+                        <h3>Tools</h3>
+                        <p>For some principles, we built in-site accessibility checker tools for users to interact with. For example, a color-contrast checker allows users to input colors, determine if the contrast ratio is high enough, and identify which WCAG levels it meets.</p>
+                        <img src="images/cv/cv_tools.png">
+                        
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div class="dark">
+                <h2>Reflection</h2>
+            </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+    
+            menuIcon.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalie Ung's Portfolio - AggieExchange Case Study</title>
+
+            <!---Normalize CSS-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <!--Google Fonts-->
+            <!--Poppins-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+            <!--Style Sheet-->
+            <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="nu logo"></a>
+            </div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Vb_X3xFp9RhavlzieOaVPvtOaosNTJ5A/view?usp=sharing" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>AggieExchange</h1>
+        <h2>STUDENT ECOMMERCE PLATFORM</h2>
+        <br>
+        <div id="ae-header">
+            <img src="images/AE.png">
+        </div>
+    </header>
+
+    <section>
+        <div class="overview">
+            <h3>OVERVIEW</h3>
+            <p>UC Davis is recognized as the most <a href="https://greenmetric.ui.ac.id/rankings/ranking-by-country-2023/USA">'green' college campus in the United States</a>, driven by the student body’s commitment to sustainability through initiatives such as running community gardens, eliminating waste throughout campus, and engaging with second-hand markets. Students have used popular e-commerce platforms like Facebook and Depop for their shopping activities, but encountered challenges ensuring quality, security, affordability, and item specificity.  <b>I researched and designed AggieExchange, the first online marketplace platform made exclusively for the UC Davis community (35,000+ students), to help improve the second-hand transaction experience for users.</b>
+            </p>
+            <div class="role">
+                <div>
+                    <h4>Role</h4>
+                    <p>Product Designer</p>
+                </div>
+                <div>
+                    <h4>Team</h4>
+                    <p>Product Manager, Technical Product Manager, Developers, Product Designers</p>
+                </div>
+                <div>
+                    <h4>Timeline</h4>
+                    <p>10 months</p>
+                </div>
+            </div>
+            <br>
+            <div class="outcome">
+                <h3>OUTCOME</h3>
+                <p>We successfully launched the MVP AggieExchange* website in Fall 2023, consistently <b>increasing user engagement by 12% monthly</b>! We also discovered a new user base—small business owners—which led to the creation of AggieMade, a sub-category for handmade goods that was launched in Winter 2024. This product also helped our parent organization, <b>AggieWorks</b>, win the <b>Building Career Pathways Award</b> from the UC Davis Center for Student Involvement 🎉!
+                </p>
+                <p>* 🚧 The site is currently under construction 🚧</p>
+            </div>
+            <br>
+        </div>
+
+        <div class="problemstatement">
+            <h2>Problem Statement</h2>
+            <div class="ps">
+                <p>Despite the vibrant resale activity in Davis, students encounter difficulties in ensuring the validity of their transactions for buying and selling goods.</p>
+            </div>
+            <br>
+        </div>
+
+        <div class="light">
+            <div id="ae-inresearch">
+                <h2>Discovering the Market-space</h2>
+                <p>To better understand the problem space, we conducted surveys, interviews, and a focus group to gain a comprehensive understanding of the vast, current resale landscape.</p>
+                <ul>
+                    <li><b>📝 01 Survey</b><br>I sent out a survey on multiple UC Davis community forums to reach a wide audience to get quantitative data on current student interactions with marketplace platforms. We gathered ~150 responses. </li>
+                    <li><b>🎙️ 02 Interview</b><br>I conducted 1:1 conversations with 14 active student buyers who shared their experiences with marketplace apps in the community, as well as their buying and selling task flow.</li>
+                    <li><b>🗣️ 03 Focus Group</b><br>I facilitated a focus group to gather insights from student buyers, sellers, and general students, aiming to understand the needs and actions that could attract all students to our platform.</li>
+                </ul>
+            </div>
+            <br>
+            <p><b>Key Takeaways</b></p>
+            <ol>
+                <li><strong>Proximity</strong>: 82% of users prefer the <strong>in-person experience</strong> when it comes to making transactions on resale platforms.</li>
+                <li><strong>Condition:</strong> Users want to <strong>see the product in person</strong> before making the final decision on whether to buy or not. </li>
+                <li><strong>Affordability:</strong> The appeal of marketplace apps is <strong>lower-priced items</strong> (90% of marketplace users use them to look for bargains)</li>
+                <li><strong>Security:</strong> Many concerned about <strong>trustworthiness</strong> of sellers / links / scammers, worried of false advertising about <strong>quality</strong></li>
+            </ol>
+        </div>
+
+        <div class="dark">
+            <h2>Seeking More Secure Solutions</h2>
+            <p>From here, I drew a user flow of how users currently conduct activities on marketplace platforms. Instead of replicating existing processes, we identified opportunities to streamline the transaction process while still ensuring security. </p>
+
+            <div class="intext-img">
+                <img src="images/ae/ae_uf.png">
+            </div>
+            <p>While many students enjoy browsing Facebook Marketplace, they often feel unsafe traveling long distances to meet strangers for potentially low-quality items (especially in a college town where most people’s #1 mode of transportation is a bike 🚲!)</p>
+        </div>
+
+        <div class="light">
+            <h2>Ideation & Iteration</h2>
+            <p>Initially, we aimed for a <b>launch in Spring 2023</b>, so that students could sell items before moving out, and consequently we iterated quickly, going through 4 rounds of iteration in the span of 1 month. We began with sketching our features to allow for quick prototyping, then moved to figma:</p>
+
+            <div id="aesketch">
+                <h4>Sketches from my iPad</h4> 
+                <p>(I love using Apple’s Freeform as well as Procreate!)</p>
+                <div class="intext-img">
+                    <img src="images/ae/ae_sketches.png">
+                </div>
+            </div>
+            <br>
+            <p>To ensure we were in alignment with all roles involved, we had regular feedback sessions with <strong>(1) our Product Managers (2) our developers to ensure features were feasible, and (3) one second-hand shopper/seller</strong> for an “expert” user perspective.</p>
+        </div>
+
+        <div class="dark">
+            <h2>Shopping can be a challenge...</h2>
+            <p>Most popular marketplace platforms like Depop, Poshmark, and eBay offer in-app transactions to streamline the user experience and reduce additional steps. Our team made the decision to <strong>avoid conducting in-platform transactions</strong> in our MVP to prevent <strong>liability concerns, implementation challenges, and potential reliability issues</strong>. This presented a challenge, as it could undermine our reputation as a "secure" platform and turn users away.</p>
+
+            <div class="intext-img">
+                <img src="images/ae/ae_uf2.png">
+            </div>
+
+            <p>→ To remedy this, I proposed we have a transaction model similar to Facebook Marketplace in which purchase details (payment, delivery, etc.) take place in conversation between the buyer and seller.</p>
+            <br>
+        </div>
+
+        <div class="light">
+            <h2>Testing it Out</h2>
+            <p>After completing several design iterations, we set up testing sessions with <strong>10 users</strong> to ensure that the designs would meet their needs. We had users run through the main tasks of our app and to share their feedback. They identified two main areas that needed improvement:</p>
+
+
+            <div id="challenges">
+                <div>
+                    <p><strong>01 - Cluttered Profile</strong><br>When navigating the profile, users felt <strong>overwhelmed</strong>, stating that there were too many tabs with similar functions.</p>
+                    <div id="challenges-img">
+                        <img src="images/ae/ae_ut1.png">
+                    </div>
+                    <p>We streamlined our initial <strong>5 profile page tabs into 3</strong>, aiming to reduce cognitive load and enhance usability. We also <strong>increased the size of multiple elements</strong> to improve readbility.</p>
+                </div>
+                
+                <div>
+                    <p><strong>02 - Greater Assurance of Security</strong><br>Users expressed a <strong>lingering sense of insecurity</strong> when interacting with other users and listings.</p>
+                    <div id="challenges-img">
+                        <img src="images/ae/ae_ut2.png">
+                    </div>
+                    <p>I suggested we implement <strong>"report user"</strong> and <strong>"report listing"</strong> buttons, as well as a <strong>User Status</strong> feature on profiles so users could verify the activity status of other users. 
+                    </p>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="dark">
+            <h2>Branding</h2>
+            <p>Creating the branding for AggieExchange was my favorite part of this project: UC Davis is a vibrant, organic, and fun community, so we aimed to incorporate playful elements that resonate with its values.</p>
+            <div class="intext-img">
+                <img src="images/ae/ae_ds.png">
+            </div>
+            <br>
+            <p>UC Davis’s official mascot is an <strong>Aggie, an agricultural horse,</strong> but by popular vote, the student body would say it is a <strong>Cow</strong>. Using Adobe Illustrator, I crafted a cow mascot for our site for graphics on the platform and in marketing campaigns.</p>
+           <div class="intext-img">
+                <img src="images/ae/ae_ms.png">
+           </div>
+           <br>
+        </div>
+
+        <div class="light">
+            <h2>Final Designs</h2>
+            <p>We launched our first iteration of the product in October 2023. Below are key pages and features of the MVP website.</p>
+        </div>
+
+        <div class="final">
+            <div class="final-design-flex">
+                <div class="final-flex-img">
+                    <img src="images/ae/ae_home.png">
+                </div>
+                <div class="final-flex-text">
+                    <h3>Home</h3>
+                    <p>Users are welcomed by the AggieExchange cow and can explore the 4 categories: home, school, clothing, and miscellaneous, or view all listings on the page. I aimed to appeal to users with our memorable branding.</p>
+                </div>
+            </div>
+            <br>
+            <div class="final-design-top">
+                <h3>Profile</h3>
+                <p>The profile page functions as a storefront for users, enabling them to effortlessly manage their listings. Additionally, users can access their liked items and make profile edits.</p>
+                <img src="images/ae/ae_profile.png">
+                <br>
+            </div>
+            <br>
+            <div class="final-2">
+                <div class="final-design-bottom">
+                    <img src="images/ae/ae_sell.png">
+                    <h3>Sell Items</h3>
+                    <p>We built a form for sellers to fill out to streamline the selling process. Users can select from a variety of pickup options and tags, enhancing their chances of making successful sales.</p>
+                </div>
+                <div class="final-design-top">
+                    <h3>Search</h3>
+                    <p>Users are able to search for items from anywhere in the site. They can refine their search further by applying filters and sorting, creating a tailored and efficient search experience.</p>
+                    <img src="images/ae/ae_search.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+    
+            menuIcon.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

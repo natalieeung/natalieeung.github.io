@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!---Normalize CSS-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <!--Google Fonts-->
+            <!--Poppins-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+            <!--Style Sheet-->
+            <link href="styles.css" rel="stylesheet">
+            
+    <title>Natalie Ung's Portfolio - Volt SMS Case Study</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="nu logo"></a>
+            </div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Vb_X3xFp9RhavlzieOaVPvtOaosNTJ5A/view?usp=sharing" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1>Volt SMS App</h1>
+        <h2>DEMO MOBILE APP</h2>
+        <br>
+        <div id="vs-header">
+            <img src="images/VS.png">
+        </div>
+    </header>
+
+    <section>
+        <div class="overview">
+            <h3>OVERVIEW</h3>
+            <p>For many businesses, managing marketing, sales, and service SMS (Short Message Service) can be challenging due to the complexities of large-scale text messaging. Volt is a B2B SaaS startup that helps businesses manage their SMS infrastructure by providing a 'wrapper' around multiple SMS SaaS platforms, such as Twillio. They approached CodeLab, a student organization at UC Davis, to contract a team to build a FOSS (Free & Open-Source) mobile application demonstrating Volt's API. As a UI/UX Designer, I designed an intuitive mobile app that highlights the core features of Volt’s product, ensuring efficient communication for users & prospective customers. 
+            </p>
+                <br>
+            <div class="role">
+                <div>
+                    <h4>Role</h4>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div>
+                    <h4>Team</h4>
+                    <p>Project Manager, Designers, Developers</p>
+                </div>
+                <div>
+                    <h4>Timeline</h4>
+                    <p>6 months</p>
+                </div>
+            </div>
+        </div>
+
+            <div class="problemstatement">
+                <h2>Problem Statement</h2>
+                <div class="ps">
+                <p>Volt customers need a streamlined interface that improves efficiency and usability in managing SMS campaigns on the go. </p>
+                </div>
+                <br>
+                <img>
+            </div>
+
+            <div class="light">
+                <h2>Let's Chat with Stakeholders</h2>
+                <p>So who was this demo app really made for? Potential Volt customers: business owners and developers who need to manage their company SMS campaigns efficiently. These users value simplicity, flexibility, and easy integration. </p>
+                <div class="intext-img">
+                    <img src="images/vs/vs_up.png">
+                </div>
+                <br>
+            </div>
+
+            <div class="dark">
+                <h2>What Features First?</h2>
+                <p>To begin our research, I suggested we utilize the <strong>MoSCoW method</strong> to sort the various features from Volt’s API into 4 categories for our project: Must Have, Should Have, Could Have, and Will Not Have.
+                </p>
+                <div class="intext-img">
+                    <img src="images/vs/vs_mm.png">
+                </div>
+                <p>After considering factors such as user needs, time constraints, integration difficulty, and number of developers available, we decided to include <strong>(1) Contact Creation, (2) List Creation — groups of contacts, (3) 1:1 messaging, and (4) Pushes — one-time SMS blasts to a selected list,</strong> as we believed these features would be most beneficial for users.
+                </p>
+            </div>
+
+            <div class="light">
+                <h2>Ideation & Sketching</h2>
+                <p>I crafted sketches for the <strong>messaging and "push" features</strong>, making sure to incorporate common design patterns for intuitive usability. I focused on how users recieve feedback during the communication process, asking myself <strong>why would users engage with these features?</strong> and <strong>what do they expect from messaging and notifications?</strong></p>
+                
+                <p>Once our client approved our concepts, we transitioned to prototyping on Figma.</p>
+                <div class="intext-img">
+                    <img src="images/vs/vs_wf.png">
+                </div>
+            </div>
+
+            <div class="dark">
+                <h2>Testing 1..2..3...</h2>
+                <p>I conducted task-based usability tests with <strong>7 users</strong> to gain comprehensive insights on how users create, view, and send messages and pushes.</p>
+
+                <div id="challenges">
+                    <div>
+                        <strong><p>01 - Iconography</strong><br><strong>40% of users</strong> found our iconography challenging to understand, so we prioritized clarity by <strong>labeling icons</strong> in the navigation bar.</p>
+                        <div id="challenges-img">
+                            <img src="images/vs/vs_ut1.png">
+                        </div>
+                        <p>We also <strong>rebranded 'Waves' to 'Pushes'</strong> to better align with the feature's functionality. Our client endorsed this name change and implemented it across their platform.</p>
+                    </div>
+                    
+                    <div>
+                        <strong><p>02 - User Feedback</strong><br>Within Volt's API, users have the capability to schedule messages, and to streamline the user experience, we <strong>aimed to reduce screen complexity.</strong></p>
+                        <div id="challenges-img">
+                            <img src="images/vs/vs_ut2.png">
+                        </div>
+                        <p>We introduced a <strong>message preview</strong> directly within the conversation thread, complemented by a timestamp indicating the scheduled delivery time.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <p>Following our changes from usability testing, we were able to <strong>improve task completion rate by 42%</strong> and enhance user experience.
+                </p>
+            </div>
+
+            <div class="light">
+                <h2>Final Designs</h2>
+                <p>We experimented with the <strong>Tamagui component library</strong> (to expedite the development proces), making modifications to optimize each flow and modernize features for a cleaner UI, all while maintaining consistency with Volt’s existing design system. 
+                </p>
+            </div>
+
+            <div class="final">
+                <div class="final-design-flex">
+                    <div class="final-flex-img">
+                        <img src="images/vs/vs_logon.png">
+                    </div>
+                    <div class="final-flex-text">
+                        <h3>Log-In</h3>
+                        <p>Users are welcomed by the AggieExchange cow and can explore the 4 categories: home, school, clothing, and miscellaneous, or view all listings on the page. I aimed to appeal to users with our memorable branding.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="final-2">
+                    <div class="final-design-top">
+                        <h3>Messages</h3>
+                        <p>We built a form for sellers to fill out to streamline the selling process. Users can select from a variety of pickup options and tags, enhancing their chances of making successful sales.</p>
+                        <img src="images/vs/vs_messages.png">
+                        <br>
+                    </div>
+                    <div class="final-design-top">
+                        <h3>Pushes</h3>
+                        <p>We built a form for sellers to fill out to streamline the selling process. Users can select from a variety of pickup options and tags, enhancing their chances of making successful sales.</p>
+                        <img src="images/vs/vs_pushes.png">
+                        <br>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div class="dark">
+                <h2>Challenges</h2>
+
+                <h4>TAMAGUI</h4>
+                <p>Working with Tamagui presented challenges as it was our team's first experience integrating its components into our specific application. As a designer, it was a new challenge to integrate and adapt Tamagui's components to align with our app's distinct needs.</p>
+
+                <h4>DESIGN TO DEVELOPMENT</h4>
+                <p>As a student team balancing full academic course loads, we had to learn to balance our schedules to meet three times a week and collaborate asynchronously. Even though it took time to get used to checking Slack regularly, I embraced the opportunity to improve our handoff process and encouraged developers to message me for clarification on our wireframes to ensure the development of the best possible product.</p>
+            </div>
+
+            <div class="light">
+                <h2>Results & Takeaways</h2>
+                <p> While we await concrete metrics, we believe our emphasis on simplicity, efficiency, and user-centric design principleshas created a solid tool for Volt to showcase to clients. <strong>Volt acquired $3.0 million seed funding in June 2024, so I look forward to seeing where they go next!</strong></p>
+                <br>
+                <p>Looking ahead, there are several areas for potential improvement. For the next design team, we recommend implementing a <strong>more customizable UI</strong> based on ongoing user feedback to enhance usability. Additionally, we would have liked to explore <strong>integrating more advanced features from Volt's API</strong> that we didn't have time to include to further improve the user experience.</p>
+                <br>
+                <p>Personally, this project was a great experience. It was great to learn about the realm of SMS communications from a B2B and SaaS perspective and understanding the intricacies and priorities of a startup like Volt has been incredibly insightful.</p>
+            </div>
+    </section>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+    
+            menuIcon.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

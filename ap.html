@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!---Normalize CSS-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <!--Google Fonts-->
+            <!--Poppins-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+            <!--Style Sheet-->
+            <link href="styles.css" rel="stylesheet">
+            
+    <title>Natalie Ung's Portfolio - AMP Park Case Study</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="nu logo"></a>
+            </div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Vb_X3xFp9RhavlzieOaVPvtOaosNTJ5A/view?usp=sharing" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <h1>AMP Park App</h1>
+        <h2>PARKING PAYMENTS</h2>
+        <br>
+        <div id="ap-header">
+            <img src="images/AP.png">
+        </div>
+    </header>
+
+    <section>
+        <div class="overview">
+            <h3>OVERVIEW</h3>
+            <p>Nobody likes parking somewhere new – it can be costly, have complex regulations, not enough parking spots, and everywhere seems to have a different “app”. This past year, UC Davis Transportation and Parking Services shifted from the popular parking app ParkMobile to <b><a href="https://transportation.ucdavis.edu/aggiepark">AMP Park</a></b> for numerous reasons, but mostly to improve the parking experience for the campus community; however, due to a number of usability issues, it is sufficient to say the app <b>has not been a hit among users</b> (in fact, there is a large Reddit page critisizing the app 😬). UC Davis is not AMP Park’s only client, so we wanted to ensure scalability while designing. <b>As a Product Designer, I was in charge of researching and revamping profile features of the AMP Park app to help users feel more secure in managing parking, payments, and privacy.</b></p>
+            <br>
+            <div class="role">
+                <div>
+                    <h4>Role</h4>
+                    <p>Product Designer</p>
+                </div>
+                <div>
+                    <h4>Team</h4>
+                    <p>Marketing Manager, Product Designers, Developers</p>
+                </div>
+                <div>
+                    <h4>Timeline</h4>
+                    <p>2 months</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="problemstatement">
+            <h2>Problem Statement</h2>
+            <div class="ps">
+            <p>Users feel insecure managing parking, payment, and privacy on the AMP Park app due to limited customization, a poor UI, and unclear user flows.</p>
+            </div>
+            <div class="intext-img">
+                <img src="images/ap/ap_up.png">
+            </div>
+            <p>→ UC Davis has people coming to campus for a multitude of reasons everyday. How might we improve the parking payment process for <strong>all</strong> of these individuals?</p>
+        </div>
+
+        <div class="light">
+            <h2>Parking Pain Points</h2>
+            <p>Aside from paying for parking (and parking tickets), we wanted to get to know the pain points of AMP Park users with varying levels of familiarity (students, faculty, staff, visitors, etc.). We used <strong>3 primary method</strong>s to conduct user research: a competitive analysis of similar apps, conducted <strong>interviews</strong> with individuals and <strong>focus groups</strong>, and <strong>tested the AMP app with users</strong> to identify pain points. I specifically focused on people’s interactions with their profile and payments.</p>
+
+            <p>Some common themes we identified were users wanting more <strong>flexibility and personalization, and had great feelings of mistrust</strong> using the app in many regards:</p>
+            <div id="ap-r">
+                <ul>
+                    <li><strong>🔒 01 Security Concerns</strong><br><br>“The payment experience is severely <strong>lacking in clarity</strong>, why should I trust it?”</li>
+                    <li><strong>👤 02 Profile</strong><br><br><strong>3 out of 5</strong> users wished they had more autonomy over their personal settings</li>
+                    <li><strong>💳 03 Payment Methods</strong><br><br></r><strong>50% of users</strong> struggled with the pricing and payment process</li>
+                </ul>
+            </div>
+            <p>→ How can we <strong>bring attention to user features</strong>, and <strong>refresh</strong> interfaces to <strong>improve accessibility</strong> and improve overall experience?</p>
+        </div>
+
+        <div class="dark">
+            <h2>Ideation & Iteration</h2>
+            <p>Using my trusty iPad, I brainstormed solutions specifically aimed at incorporating more personalization features (such as default vehicles payment methods) as well as improvements to design components and user feedback patterns.</p>
+            <img>
+            <p>Due to the quick turn around time of the project, we quickly moved to Figma to build our ideas. Below are some of our wireframes:</p>
+            <div class="intext-img">
+                <img src="images/ap/ap_wf.png">
+            </div>
+            <p>We conducted usability testing on a small scale with UC Davis Transportation Department staff and the UC Davis Transportation Panel, as we did not want the details of the project to get out and create a PR scandal. Following their feedback, we implemented necessary changes and created our final designs as follows. </p>
+        </div>
+
+        <div class="light">
+            <h2>Final Designs</h2>
+            <p>In order to maintain the familiarity and trust users already established with the app, I made sure I did not make any stark or unnecessary changes to AMP’s existing design system in our final designs. Here are our proposed wireframes aimed improve accessibility and increase feelings of credibility.</p>
+            <br>
+        </div>
+
+        <div class="final">
+            <div class="final-design-flex">
+                <div class="final-flex-img">
+                    <img src="images/ap/ap_onboarding.png">
+                </div>
+                <div class="final-flex-text">
+                    <h3>Onboarding</h3>
+                    <p>Users are welcomed by the AggieExchange cow and can explore the 4 categories: home, school, clothing, and miscellaneous, or view all listings on the page. I aimed to appeal to users with our memorable branding.</p>
+                </div>
+            </div>
+            <br>
+            <div class="final-design-top">
+                <h3>Profile</h3>
+                <p>To provide users with a greater sense of autonomy over their personal information, I decided to reorganize the profile information into one central location to reduce in-app navigation struggles. I aimed to use more common design patterns to help users feel more secure about their information being saved on the app. I suggested we add icons for clarity, as well as utilize elements like cards to help separate information into logical groupings.</p>
+                <img src="images/ap/ap_profile.png">
+            </div>
+            <br>
+            <div class="final-2">
+                <div class="final-design-bottom">
+                    <img src="images/ap/ap_vehicles.png">
+                    <h3>Vehicles</h3>
+                    <p>We streamlined the process for editing and adding a vehicle. Currently, users can enter their information at multiple points in the app, but the entry forms lack consistency. In our proposed designs, we have created new forms for users to enter their vehicle information. Furhtermore, since many users expressed a desire to set a default vehicle, we provided an option for users to select as follows. 
+
+                    </p>
+                </div>
+                <div class="final-design-bottom">
+                    <img src="images/ap/ap_payments.png">
+                    <h3>Payments</h3>
+                    <p>We built a form for sellers to fill out to streamline the selling process. Users can select from a variety of pickup options and tags, enhancing their chances of making successful sales.</p>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="dark">
+            <h2>Feedback</h2>
+            <p>We presented our final concepts to the UC Davis Transportation Department and AMP Park managment team. Here is some feedback we received:</p>
+            <div id="ap-quotes">
+                <ul>
+                    <li><b>💬 User 1</b><br>“Very well thought out solutions that don’t fully alienate users to the existing app”</li>
+                    <li><b>💬 User 2</b><br>“Adding onboarding is something we wouldn’t have even thought of yet it addresses so many issues”</li>
+                    <li><b>💬 User 3</b><br>“The new profile settings are much more intuitive, looks like every other app”</li>
+                </ul>
+            </div>
+            <br>
+        </div>
+
+        <div class="light">
+            <h2>Next Steps</h2>
+            <p>We were forutnate enough to be able to work directly with the developers of AMP Park to try and implement these features to improve the parking experience. While it may be a bit longer till we see the larger UI changes, certain aspects of profile and payment flow have been revamped per my suggestions. We look forward to hearing feedback via the annual <strong>UC Davis Transportation Services Feedback Survey</strong>.</p>
+            <br>
+            <p>For future iterations, it would be nice to <strong>further refine the UI</strong> and try to <strong>include new design patterns</strong>. Additionally, we would like to continue experimenting with design system changes such as colors and typography. I am <strong>continuing as a product designer</strong> for the department into the next academic year and look forward to exploring more of the parking-space problem-space 🅿️!</p>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+    
+            menuIcon.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
