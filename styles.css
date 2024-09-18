@@ -503,6 +503,11 @@ header {
     width: auto; /* Prevent stretching */
 }
 
+.intext-img p{
+    font-size: 10px;
+    line-height: 2em;
+    padding: 1vh 4vw;
+}
 .ps p {
     font-size: 16px;
     line-height: 2em;
@@ -899,7 +904,7 @@ a {
     line-height: 1.5em;
 }
 
-#cv-uf ul {
+.cv-3 ul {
     display: grid;
     grid-template-columns: repeat(1, 3fr); /* Create 3 equal columns */
     gap: 20px; /* Space between the boxes */
@@ -908,19 +913,19 @@ a {
     list-style: none; /* Remove default list styling */
 }
 
-#cv-uf ul li {
+.cv-3 ul li {
     background-color: white; /* Set the background color to white */
     padding: 2vh; /* Add padding inside the boxes */
     border-radius: 5px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
 }
 
-#cv-uf ul li b {
+.cv-3 ul li b {
     font-size: 14px;
     font-weight: 600;
 }
 
-#cv-uf ul li {
+.cv-3 ul li {
     font-size: 12px;
 }
 
@@ -1621,7 +1626,7 @@ a {
         list-style: none; /* Remove default list styling */
     }
     
-    #cv-uf ul {
+    .cv-3 ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
         gap: 20px; /* Space between the boxes */
@@ -1630,7 +1635,7 @@ a {
         list-style: none; /* Remove default list styling */
     }
 
-    #cv-uf ul li {
+    .cv-3 ul li {
         background-color: white; /* Set the background color to white */
         padding: 20px; /* Add padding inside the boxes */
         border-radius: 5px; /* Optional: Add rounded corners */
